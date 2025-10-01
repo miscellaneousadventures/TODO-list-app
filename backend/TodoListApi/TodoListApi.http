@@ -1,0 +1,15 @@
+﻿@TodoListApi_HostAddress = https://localhost:7127
+
+POST {{TodoListApi_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+  "name":"walk dog",
+  "IsCompleted":true
+}
+
+###
+
+GET {{TodoListApi_HostAddress}}/todoitems
+
+###

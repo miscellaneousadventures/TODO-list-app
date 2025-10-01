@@ -1,0 +1,29 @@
+
+<main class="todoList-container">
+    <h1>Simple To Do List :D</h1>
+    <form class="add-task" (submit)="addTask(newTodoListItem()); $event.preventDefault()">
+        <input
+            type="text"
+            placeholder="Add Task"
+            [value]="newTodoListItem()"
+            (input)="newTodoListItem.set($event.target.value)"
+            autocomplete="off"
+        />
+        <button type="submit">Add</button>
+    </form>
+    <ul class="todo-list">
+        @for (todoItem of todoList(); track todoItem.id) {
+            <li [ngClass]="{'completed': todoItem.isCompleted}">
+                <input
+                    type="checkbox"
+                    [checked]="todoItem.isCompleted"
+                    (change)="toggleCompleted(todoItem.id)"
+                    aria-checked="{{todoItem.isCompleted}}"
+                />
+                <span [class.completed]="todoItem.isCompleted">{{ todoItem.name }}</span>
+                <button class="delete-btn" (click)="deleteTask(todoItem.id)" >Delete</button>
+            </li>
+        }
+    </ul>
+</main>
+<router-outlet />
