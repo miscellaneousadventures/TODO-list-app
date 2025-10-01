@@ -13,7 +13,7 @@ export interface TodoListItem {
   providedIn: 'root'
 })
 export class TodolistService {
-    private apiUrl = 'https://localhost:7127/todolistitems';
+    private apiUrl = 'http://localhost:5159/todolistitems';
     constructor(private http: HttpClient) {}
 
     getAllTodoListItems(): Observable<TodoListItem[]> {
