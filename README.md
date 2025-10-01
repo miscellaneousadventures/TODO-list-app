@@ -1,21 +1,37 @@
-BACKEND:
+## 🖥️ Backend Setup (.NET Web API)
+
+```bash
 cd TODO-list-app\backend\TodoListApi
 dotnet restore
 dotnet run
-runs on http://localhost:5159
+```
 
-backend runs on http://localhost:5159 no HTTPS setup is required.
+- Runs on: `http://localhost:5159`
+- No HTTPS setup is required
 
-FRONTEND:
+---
+
+## 🌐 Frontend Setup (Angular)
+
+```bash
 cd TODO-list-app\frontend\simple-todo-list
 npm install
 ng serve
-runs on http://localhost:4200
+```
 
-OpenAPI doco:
-http://localhost:5159/openapi/ToDoList.json
+- Runs on: `http://localhost:4200`
 
-Basic test:
+---
+
+## 📘 OpenAPI Documentation
+
+- View the API schema at: `http://localhost:5159/openapi/ToDoList.json`
+
+---
+
+## 🧪 Basic Test
+
+```bash
 cd TODO-list-app\frontend\simple-todo-list
 ng test
-
+```
